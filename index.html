@@ -64,7 +64,6 @@ figure.map img{transition:filter .2s}
 <main>
 <h1>Constructal biology: one pentad, four substrates</h1>
 <p class="sub">I Agentive, II Objective, III Errative, IV Interactive, V Selective, then V becomes I′. No VI.</p>
-<nav class="tabs" id="tabs" role="tablist"></nav>
 
 <section id="pentad"><div class="scroll"><table>
 <tr><th></th><th>I Agentive</th><th>II Objective</th><th>III Errative</th><th>IV Interactive</th><th class="v">V Selective</th></tr>
@@ -1701,11 +1700,11 @@ if at all Bejan's Constructral Law is predictive isn't this something to bet on?
 </main>
 <script>
 var S=[["pentad","Pentad"],["ledger","Ledger"],["gpt","GPT chain"],["mato","Mato HR"],["avodah","Avodah build"],["catchment","Catchment"],["dionysian","Dionysian"],["lineage","Lineage"],["silkroad","Silk Road"],["physical","Physical singularity"],["verbatim","Verbatim"],["refs","References"]];
-var tabs=document.getElementById("tabs"),menu=document.getElementById("menu");
+var menu=document.getElementById("menu");
 function show(id){S.forEach(function(s){document.getElementById(s[0]).classList.toggle("on",s[0]===id)});
-[].forEach.call(tabs.children,function(b){b.setAttribute("aria-selected",b.dataset.id===id)});
+[].forEach.call(menu.children,function(b){b.setAttribute("aria-selected",b.dataset.id===id)});
 menu.classList.remove("on");try{history.replaceState(null,"","#"+id)}catch(e){}window.scrollTo(0,0)}
-S.forEach(function(s){["tab","menu"].forEach(function(k){var b=document.createElement("button");b.textContent=s[1];b.dataset.id=s[0];b.onclick=function(){show(s[0])};if(k==="tab"){b.setAttribute("role","tab");tabs.appendChild(b)}else menu.appendChild(b)})});
+S.forEach(function(s){var b=document.createElement("button");b.textContent=s[1];b.dataset.id=s[0];b.onclick=function(){show(s[0])};menu.appendChild(b)});
 document.getElementById("wfb").onclick=function(){var o=menu.classList.toggle("on");this.setAttribute("aria-expanded",o)};
 var h=(location.hash||"").slice(1);show(S.some(function(s){return s[0]===h})?h:"pentad");
 var r=document.documentElement,tb=document.getElementById("th");
