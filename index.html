@@ -47,6 +47,10 @@ blockquote.q{margin:14px 0;padding:10px 16px;border-left:4px solid var(--acc);ba
 .hl{margin:18px 0;padding:14px 16px;border:2px solid var(--v);border-radius:10px;background:var(--vbg);color:var(--ink);font:15px/1.6 system-ui,sans-serif}.hl h3{margin:0 0 6px;color:var(--v);font:600 13px system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase}.hl p{margin:.5em 0}
 section h3.rd{font:500 16px system-ui,sans-serif;margin:22px 0 6px}section ul.rd{font:14px/1.6 system-ui,sans-serif;padding-left:20px}section ul.rd li{margin:6px 0}
 figure.map{margin:14px 0}figure.map img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:8px}figure.map figcaption{font:13px/1.5 system-ui,sans-serif;color:var(--mute);margin-top:6px}details{margin:18px 0}details summary{cursor:pointer;font:14px system-ui,sans-serif;color:var(--acc)}
+figure.map img{transition:filter .2s}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) figure.map img{filter:invert(1) hue-rotate(180deg) brightness(.88) contrast(.92)}}
+:root[data-theme="dark"] figure.map img{filter:invert(1) hue-rotate(180deg) brightness(.88) contrast(.92)}
+@media(prefers-reduced-motion:reduce){figure.map img{transition:none}}
 </style></head><body>
 <header>
 <div class="l">
