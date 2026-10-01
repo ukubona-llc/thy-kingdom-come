@@ -2216,7 +2216,7 @@ its an autoencoder ! Data II. Encoding III. Latent Space / Embeddings IV. Decodi
 <h3 class="rd">Pentadic table 2. The chord-stack loop, on the autoencoder vocabulary</h3>
 <div class="scroll"><table>
 <tr><th>Node</th><th>Jazz as a chord-stack system</th><th>Autoencoder reading</th></tr>
-<tr><td class="k">I Data</td><td>Finite inputs: the seven diatonic chords, as triads or sevenths, stacked on a base</td><td>The input examples</td></tr>
+<tr><td class="k">I Data</td><td>Finite inputs: the seven diatonic chords, as triads or sevenths, stacked on a base; these seed the generator in Table 4</td><td>The input examples</td></tr>
 <tr><td class="k">II&ndash;III</td><td>Stack more thirds, change the base, borrow, alter: the combinatorial search space, large enough that a band does not exhaust it (<a href="#scaffold" onclick="show('scaffold');return false">Scaffolding</a>)</td><td>Encoding into a latent space of possible codes</td></tr>
 <tr><td class="k v">IV</td><td class="v">The chord name is the code the band shares; each player decodes it into a voicing, a comp or a line, live</td><td class="v">Decoding from the code</td></tr>
 <tr><td class="k v">V &rarr; I&prime;</td><td class="v">What the band keeps becomes the next vocabulary, and the next generation receives it as data</td><td class="v">Representation, returning as I&prime;</td></tr>
@@ -2233,7 +2233,19 @@ its an autoencoder ! Data II. Encoding III. Latent Space / Embeddings IV. Decodi
 </table></div>
 <p class="note">Seven roots times five stack heights gives 35 diatonic stackings in one key, before the last two rows are counted. That arithmetic is mine and is easy to check.</p>
 
-<h3 class="rd">Pentadic table 4. Recalling the simpler forms from the stack</h3>
+<div class="hl"><h3>Few inputs is not little data: it is an engine</h3>
+<p>The seven chords are not a small dataset that somehow yields a lot. They are the seed of a generator. Add the stacking rule and the naming grammar and you have an engine that produces any chord on demand, which in the terms of <a href="https://www.nobelprize.org/prizes/chemistry/2024/hassabis/lecture/">Hassabis&rsquo;s Nobel lecture</a> is an accurate and efficient simulator: data that is manufactured, not collected. Little data alone could not make something from nothing. The structure in the rules (thirds on a scale, twelve equal steps, a name for each result) does the work, and I read it as the compressed inheritance of earlier phases.</p></div>
+
+<h3 class="rd">Pentadic table 4. The lecture&rsquo;s three conditions, applied to the chord stack</h3>
+<div class="scroll"><table>
+<tr><th>Condition for a suitable problem</th><th>The chord stack</th><th>Fit</th></tr>
+<tr><td class="k">1 A massive combinatorial search space</td><td>Roots, stack heights, bases, alterations and keys multiply (Table 3)</td><td>Strong</td></tr>
+<tr><td class="k">2 A clear objective function to optimise against</td><td>None written down: the band, the listener and the room select, which is V</td><td>Weak: a selector, not a metric</td></tr>
+<tr><td class="k v">3 Lots of data and/or an accurate, efficient simulator</td><td class="v">The rules and the names generate exact chords cheaply, so the data never has to be collected</td><td class="v">Strong: the simulator is the rules</td></tr>
+</table></div>
+<p class="note">Row 3 is the point of this block: the scarce thing is the generator, not the data. The generator makes candidates cheap, and V decides which survive and return as I&prime;.</p>
+
+<h3 class="rd">Pentadic table 5. Recalling the simpler forms from the stack</h3>
 <div class="scroll"><table>
 <tr><th>Simpler form</th><th>How it is recalled from the stack</th></tr>
 <tr><td class="k">The triad</td><td>Take a seventh chord and drop everything above the fifth</td></tr>
@@ -2245,7 +2257,7 @@ its an autoencoder ! Data II. Encoding III. Latent Space / Embeddings IV. Decodi
 
 <div class="ret">Return: V &rarr; I&prime;. The next pass starts from the <a href="#pentad" onclick="show('pentad');return false">Pentad tab</a>, with this as its inheritance.</div>
 
-<p class="note"><b>Honest bounds.</b> (1) <b>&ldquo;Terminal&rdquo; is my framing.</b> It says jazz holds the earlier vocabularies as subsets and that the trip ends at a changed home, not that it is the end of music or that history ran in that order; the older forms were not derived from jazz. (2) <b>&ldquo;Virtually any chord&rdquo; needs the extensions.</b> Pure diatonic stacking gives only diatonic chords; the rest comes from alteration, borrowing and a different base, as in Table 3. (3) <b>The naming system is one convention.</b> I credit the Berklee system with the communication and the transmission, but I have not compared it with the others (Roman numerals, Nashville numbers, figured bass), so &ldquo;perfect&rdquo; is my judgement from use. (4) <b>The loop on top is an analogy.</b> The autoencoder vocabulary is a lens I have used throughout, and it is untested here. (5) <b>Home may be a network, not a place.</b> I read flamenco&rsquo;s home as family and kin, from general knowledge, and have not checked it against the film or the Roma literature; the claim that no group is wholly homeless is mine. (6) <b>The return changes home, but not equally.</b> In direction it is certain; in size it varies, and some returns are small, delayed or refused, as the refused trials in gospel were.</p>
+<p class="note"><b>Honest bounds.</b> (1) <b>&ldquo;Terminal&rdquo; is my framing.</b> It says jazz holds the earlier vocabularies as subsets and that the trip ends at a changed home, not that it is the end of music or that history ran in that order; the older forms were not derived from jazz. (2) <b>&ldquo;Virtually any chord&rdquo; needs the extensions.</b> Pure diatonic stacking gives only diatonic chords; the rest comes from alteration, borrowing and a different base, as in Table 3. (3) <b>The naming system is one convention.</b> I credit the Berklee system with the communication and the transmission, but I have not compared it with the others (Roman numerals, Nashville numbers, figured bass), so &ldquo;perfect&rdquo; is my judgement from use. (4) <b>The loop on top is an analogy.</b> The autoencoder vocabulary is a lens I have used throughout, and it is untested here. (5) <b>Home may be a network, not a place.</b> I read flamenco&rsquo;s home as family and kin, from general knowledge, and have not checked it against the film or the Roma literature; the claim that no group is wholly homeless is mine. (6) <b>The return changes home, but not equally.</b> In direction it is certain; in size it varies, and some returns are small, delayed or refused, as the refused trials in gospel were. (7) <b>The three-condition mapping is mine.</b> The lecture lists them as what makes a problem suitable for AI, and I have applied them to music, where condition 2 has no clean metric. I am not claiming that jazz is a problem for AI to solve, only that the same conditions describe why the search does not run dry. The simulator is also exact about notes and silent on whether a chord sounds good, and that second question is the selector&rsquo;s.</p>
 
 <details><summary>Request log: my note, verbatim</summary>
 <p class="note">Append-only and non-lossy: the message and the file below are preserved as sent.</p>
@@ -2265,8 +2277,11 @@ So Jazz is like a "terminal" case from which simpler shit can be recalled from e
 your pushback is shallow. the silk road involves trips "from home" to "somewhere" and back, no? are there pure homelss gaitanos???
 
 --- user message, 1 Oct 2026 (the second revision) ---
-great. add to the epilogue, then ... so that no one makes that shallow error again. moreoever, in trade, anything returning home obviously transforms it... so I -&gt; V - I' be real!</pre>
-<div class="app">Appended entries: 3 (1 Oct 2026: the request that built the Epilogue tab, the pushback, and the request for the home-away-return revision).</div></details>
+great. add to the epilogue, then ... so that no one makes that shallow error again. moreoever, in trade, anything returning home obviously transforms it... so I -&gt; V - I' be real!
+
+--- user message, 1 Oct 2026 (the third revision, with hassabis-lecture.pdf attached) ---
+worth adding this note to the epilogue on a "few inputs". From a data perspective that is "efficient simulator"; we have an engine for generating data!!! its not so much the data (ie little data,... that wouldn't make something from nothing... )</pre>
+<div class="app">Appended entries: 4 (1 Oct 2026: the request that built the Epilogue tab, the pushback, the home-away-return revision, and the engine-not-data revision).</div></details>
 </section>
 
 <section id="verbatim"><p class="note">Append-only and non-lossy: the file below is preserved character for character. New material goes in dated blocks after it, never over it.</p>
@@ -3416,7 +3431,7 @@ if at all Bejan's Constructral Law is predictive isn't this something to bet on?
 <li>Wesley, S. S., &ldquo;Aurelia&rdquo; (1864), tune for &ldquo;The Church&rsquo;s One Foundation&rdquo; (text by S. J. Stone, 1866); Cliff, J., &ldquo;Many Rivers to Cross&rdquo; (1969). Dates cited from memory, to check before quoting; source of the Harmony tab</li>
 </ul></section>
 </main>
-<script>   
+<script>
 var S=[["pentad","Pentad"],["ledger","Ledger"],["gpt","GPT chain"],["mato","Mato HR"],["avodah","Avodah build"],["catchment","Catchment"],["dionysian","Dionysian"],["street","Street Conservatory"],["lineage","Lineage"],["silkroad","Silk Road"],["physical","Physical singularity"],["harmony","Harmony"],["tonal","Tonal interchange"],["functional","Functional cache"],["compound","Compounding"],["zulu","Zulu words"],["collision","Collision"],["muntu","Muntu Wami"],["gospel","Gospel & Flamenco"],["scaffold","Scaffolding"],["synthesis","Synthesis"],["autoencoder","Autoencoder"],["epilogue","Epilogue"],["verbatim","Verbatim"],["refs","References"]];
 var menu=document.getElementById("menu");
 function show(id){S.forEach(function(s){document.getElementById(s[0]).classList.toggle("on",s[0]===id)});
