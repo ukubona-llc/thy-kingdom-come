@@ -1480,6 +1480,36 @@ There is a harmony tab that ommitted https://www.youtube.com/watch?v=gn46eMGmPTw
 <p class="note"><b>Honest bounds.</b> (1) Unchecked against the audio. (2) ii&ndash;V&ndash;I to the relative major and a ii&oslash;&ndash;V back to the minor tonic are very common moves, so fitting them to a track is not surprising; the claim here is only that the slash form says it more compactly. (3) The notation is a labelling choice. It earns its place if it keeps predicting, for instance when a Phrygian or other parallel-mode chord arrives and needs its own territory tag.</p>
 </section>
 
+<section id="functional"><p class="note">Vision note, in my own voice, compressed from a session with another AI. The question: given four notes on a keyboard, what does a reading that sees function give that a reading that sees coordinates does not? The music below is checked. The clinical parallel is an analogy, not a result. Companion to the <a href="#tonal" onclick="show('tonal');return false">Tonal interchange tab</a>.</p>
+
+<div class="hl"><h3>The example</h3>
+<p>Left hand: C2 and F&sharp;2. Right hand: E3 and A3. Four pitch classes, <b>C &ndash; E &ndash; F&sharp; &ndash; A</b>, and no D anywhere. In a context where D &rarr; G &rarr; C is the expected path, these four notes are a rootless D9: F&sharp; (3rd), A (5th), C (&flat;7), E (9th). The left-hand tritone C&ndash;F&sharp; is the 3rd and 7th of D7, the same guide tones as on the Tonal tab. The D is read, not heard, and the next token is <b>G</b> (or G/B).</p></div>
+
+<div class="scroll"><table>
+<tr><th>Reading</th><th>What it sees</th><th>What it says about the next token</th></tr>
+<tr><td class="k">Coordinate</td><td>The set {C, E, F&sharp;, A}. It can be labelled F&sharp;&oslash;7, Am6 or rootless D9, and all three are legitimate.</td><td>Nothing on its own. A label for the pitches is not a path.</td></tr>
+<tr><td class="k">Functional</td><td>The same set plus context (a D &rarr; G &rarr; C field): a latent D9, the V of G.</td><td class="v">G (or G/B), then C.</td></tr>
+</table></div>
+
+<h3 class="rd">Two caches</h3>
+<ul class="rd">
+<li><b>State cache:</b> X<sub>t</sub>, what is observed. This is the coordinate view.</li>
+<li><b>Transition cache:</b> what this configuration does next. This is the functional view.</li>
+<li>Along the compression chain: Tensor (C, E, F&sharp;, A) &rarr; Matrix (their interval relations) &rarr; Vector (motion toward D) &rarr; Eigenmode (the dominant or pre-dominant pattern) &rarr; Scalar (hear, play, resolve the D).</li>
+</ul>
+
+<div class="ret">V &rarr; I&prime; &middot; each committed token becomes the next state</div>
+
+<div class="hl"><h3>The humility rule</h3>
+<p>The functional reading does not leap from observed notes to a confident future. It first earns the latent D, then commits to the next token (G or G/B), and only from that new state does it bet on what follows. Each prediction updates the state the next one starts from, as in stochastic gradient descent at a low learning rate: one successful inference does not license a giant step.</p>
+<p>The clinical parallel, kept as an analogy: episodic chest pain at rest with transient ST elevation does not name the diagnosis. The relation among the findings makes a latent mechanism (vasospastic angina) a live hypothesis, which is then tested before the next bet.</p></div>
+
+<div class="hl"><h3>The same four notes, two routes</h3>
+<p>F&sharp; &ndash; A &ndash; C &ndash; E is also F&sharp;m7&flat;5, the ii<sup>&oslash;7</sup> of engine 2 on the Tonal tab. Read as D9 it routes to G (/III). Read as F&sharp;&oslash;7 it routes through B7 to Em (/i). Identical coordinates, two functions, two destinations. That is the routing node of the pentad (III, Errative), and context is what chooses.</p></div>
+
+<p class="note"><b>Honest bounds.</b> (1) The comparison is lopsided. The coordinate reading is given no context and the functional reading is given a lot. A coordinate reading with the same context would predict too, so the claim is that a pitch set alone underdetermines the next chord, not that coordinates are inferior. That keeps the two views co-equal. (2) The idea that an omitted D can be more informative than a sounded one is plausible and untested here. (3) The reading assumes a key-of-C field. In another context these notes are something else. (4) One label in the source session, C6/F&sharp;, does not fit, since C6 needs a G; F&sharp;&oslash;7, Am6 and rootless D9 do. (5) The clinical parallel is an illustration, not evidence.</p>
+</section>
+
 <section id="collision"><p class="note">Vision note, in my own voice, from one session with Claude on 1 Oct 2026, about a week after meeting the constructal law. It sprawled: trees, rivers, immune systems, a patient app, adversaries, and a dynamic axiom. Every branch below is a hypothesis at IV, not yet run through V.</p>
 
 <h3 class="rd">1 &middot; The collision, as a pentad</h3>
@@ -2755,7 +2785,7 @@ if at all Bejan's Constructral Law is predictive isn't this something to bet on?
 </ul></section>
 </main>
 <script>
-var S=[["pentad","Pentad"],["ledger","Ledger"],["gpt","GPT chain"],["mato","Mato HR"],["avodah","Avodah build"],["catchment","Catchment"],["dionysian","Dionysian"],["lineage","Lineage"],["silkroad","Silk Road"],["physical","Physical singularity"],["harmony","Harmony"],["tonal","Tonal interchange"],["collision","Collision"],["muntu","Muntu Wami"],["verbatim","Verbatim"],["refs","References"]];
+var S=[["pentad","Pentad"],["ledger","Ledger"],["gpt","GPT chain"],["mato","Mato HR"],["avodah","Avodah build"],["catchment","Catchment"],["dionysian","Dionysian"],["lineage","Lineage"],["silkroad","Silk Road"],["physical","Physical singularity"],["harmony","Harmony"],["tonal","Tonal interchange"],["functional","Functional cache"],["collision","Collision"],["muntu","Muntu Wami"],["verbatim","Verbatim"],["refs","References"]];
 var menu=document.getElementById("menu");
 function show(id){S.forEach(function(s){document.getElementById(s[0]).classList.toggle("on",s[0]===id)});
 [].forEach.call(menu.children,function(b){b.setAttribute("aria-selected",b.dataset.id===id)});
