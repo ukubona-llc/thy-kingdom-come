@@ -2155,6 +2155,43 @@ I think the synthesis of the entire document (or operhaps only the flamenco shit
 <div class="app">Appended entries: 1 (1 Oct 2026, the request that built the Synthesis tab).</div></details>
 </section>
 
+<section id="autoencoder"><p class="note">Vision note, in my own voice, from a one-line note of mine (preserved verbatim at the foot). It names the loop of the <a href="#synthesis" onclick="show('synthesis');return false">Synthesis</a> and <a href="#scaffold" onclick="show('scaffold');return false">Scaffolding</a> tabs: an autoencoder. A hypothesis at IV, not yet run through V.</p>
+
+<div class="hl"><h3>The claim, in one line</h3>
+<p>I Data, II Encoding, III Latent space (embeddings), IV Decoding, V Representation, and V returns as I&prime;. The latent space is the scaffolding; the bottleneck in the middle is where a rich source is compressed to a code and then rebuilt.</p></div>
+
+<h3 class="rd">Pentadic figure 1. The hourglass, with the return</h3>
+<figure class="map"><svg viewBox="0 0 680 200" role="img" aria-label="Autoencoder hourglass: data, encoder narrowing, latent space, decoder widening, representation, with a return arrow to data as I prime"><g fill="var(--card)" stroke="var(--v)" stroke-width="1.5"><rect x="20" y="60" width="80" height="80" rx="6"/><polygon points="115,55 235,85 235,115 115,145"/><rect x="250" y="88" width="50" height="24" rx="4" fill="var(--vbg)"/><polygon points="315,85 435,55 435,145 315,115"/><rect x="450" y="60" width="80" height="80" rx="6"/></g><g stroke="var(--acc)" stroke-width="1.6" fill="none"><path d="M490 60V25H60V52"/></g><polygon points="55,52 65,52 60,60" fill="var(--acc)"/><g font-family="system-ui,sans-serif" font-size="12" fill="var(--ink)" text-anchor="middle"><text x="60" y="104">I Data</text><text x="175" y="104">II Encode</text><text x="275" y="150">III Latent</text><text x="375" y="104">IV Decode</text><text x="490" y="104">V Represent</text><text x="275" y="40" fill="var(--acc)">V &rarr; I&prime;: the output becomes the next input</text></g></svg><figcaption>Figure 1. A schematic. The narrow middle is the bottleneck: everything that passes from II to IV passes through it.</figcaption></figure>
+
+<h3 class="rd">Pentadic table 1. The five nodes, on three vocabularies</h3>
+<div class="scroll"><table>
+<tr><th>Node</th><th>Autoencoder</th><th>Music, as I compress it</th><th>Site slot (relabel)</th></tr>
+<tr><td class="k">I Data</td><td>The input examples</td><td>A very rich, diverse source: voices, hymns, the street, the radio</td><td>I Agentive</td></tr>
+<tr><td class="k">II Encoding</td><td>The encoder maps input to a short code</td><td>Hearing and learning by ear; compressing a repertoire to ii&ndash;V7&ndash;I</td><td>II Objective</td></tr>
+<tr><td class="k">III Latent space</td><td>The embedding: the space of possible codes</td><td>12TET and the ii&ndash;V7&ndash;I scaffold with its moving home; the genre as a region</td><td>III Errative</td></tr>
+<tr><td class="k v">IV Decoding</td><td class="v">The decoder rebuilds an output from the code</td><td class="v">Performing from the code: voicing, improvising, reharmonizing</td><td class="v">IV Interactive</td></tr>
+<tr><td class="k v">V Representation &rarr; I&prime;</td><td class="v">The reconstruction, which is compared with the input</td><td class="v">The music as played; the next generation receives it as data</td><td class="v">V Selective</td></tr>
+</table></div>
+<p class="note">The site-slot column is a plain relabel of mine. On the site II is the Objective; in an autoencoder the objective is the reconstruction error, and Encoding is the operation that serves it. The return to I&prime; is shown as the arrow in Figure 1, not as a sixth node: the site&rsquo;s rule is no VI.</p>
+
+<h3 class="rd">Pentadic table 2. What the autoencoder reading adds</h3>
+<div class="scroll"><table>
+<tr><th>Earlier claim</th><th>Autoencoder reading</th></tr>
+<tr><td class="k">Rootless V7&flat;9 (<a href="#gospel" onclick="show('gospel');return false">Gospel &amp; Flamenco</a>)</td><td>The keyboardist drops the root and the bass or the ear restores it from context: a small reconstruction from a partial code</td></tr>
+<tr><td class="k">Scaffolding must be too large to exhaust (<a href="#scaffold" onclick="show('scaffold');return false">Scaffolding</a>)</td><td>The latent space is that scaffold; its size is the number of distinct codes, not the number of dimensions</td></tr>
+<tr><td class="k">Nostalgia each generation (<a href="#synthesis" onclick="show('synthesis');return false">Synthesis</a>)</td><td>I&prime; is a reconstruction of the last generation&rsquo;s V, so it is close to the original and never identical to it</td></tr>
+<tr><td class="k v">Passion in danger (<a href="#dionysian" onclick="show('dionysian');return false">Dionysian</a>)</td><td class="v">A recording keeps one reconstruction; the encoder, which is the lineage, is what is at risk. Each pass through a lossy bottleneck loses a little, so a chain of passes loses more</td></tr>
+</table></div>
+
+<p class="note"><b>Honest bounds.</b> (1) <b>Feeding the output back is my extension.</b> A standard autoencoder compares its output with its input and stops there; V &rarr; I&prime; is an iterated use of it, closer to a chain of copies than to a trained model. (2) <b>The bottleneck and the big scaffold pull apart.</b> A latent space smaller than the data forces compression, which is the point; a latent space as large as the data can simply copy and learn nothing unless something constrains it (sparsity, noise, a prior). So &ldquo;too large to exhaust&rdquo; has to mean many distinct codes under a constraint, not a wide open space. (3) <b>Two senses of &ldquo;representation&rdquo;.</b> In machine learning the word often names the latent code, which sits at III here; at V I read it as the output, the thing represented back. (4) <b>The music is an analogy.</b> Ears and communities are not trained networks, and nobody has measured an encoder or a code. (5) <b>Compounding loss</b> is a general property of repeated lossy passes; whether music reaches a stable fixed point instead is untested here. (6) <b>The dropped root</b> is restored only by listeners who share the code, which fits the point that the carriers matter.</p>
+
+<details><summary>Request log: my note, verbatim</summary>
+<p class="note">Append-only and non-lossy: the message below is preserved as sent.</p>
+<pre>--- user message that requested this tab (1 Oct 2026) ---
+its an autoencoder ! Data II. Encoding III. Latent Space / Embeddings IV. Decoding V. Representation -&gt; I'</pre>
+<div class="app">Appended entries: 1 (1 Oct 2026, the request that built the Autoencoder tab).</div></details>
+</section>
+
 <section id="verbatim"><p class="note">Append-only and non-lossy: the file below is preserved character for character. New material goes in dated blocks after it, never over it.</p>
 <pre id="vb"># Ukubona
 I. God (Agentive)
@@ -3303,7 +3340,7 @@ if at all Bejan's Constructral Law is predictive isn't this something to bet on?
 </ul></section>
 </main>
 <script>
-var S=[["pentad","Pentad"],["ledger","Ledger"],["gpt","GPT chain"],["mato","Mato HR"],["avodah","Avodah build"],["catchment","Catchment"],["dionysian","Dionysian"],["street","Street Conservatory"],["lineage","Lineage"],["silkroad","Silk Road"],["physical","Physical singularity"],["harmony","Harmony"],["tonal","Tonal interchange"],["functional","Functional cache"],["compound","Compounding"],["zulu","Zulu words"],["collision","Collision"],["muntu","Muntu Wami"],["gospel","Gospel & Flamenco"],["scaffold","Scaffolding"],["synthesis","Synthesis"],["verbatim","Verbatim"],["refs","References"]];
+var S=[["pentad","Pentad"],["ledger","Ledger"],["gpt","GPT chain"],["mato","Mato HR"],["avodah","Avodah build"],["catchment","Catchment"],["dionysian","Dionysian"],["street","Street Conservatory"],["lineage","Lineage"],["silkroad","Silk Road"],["physical","Physical singularity"],["harmony","Harmony"],["tonal","Tonal interchange"],["functional","Functional cache"],["compound","Compounding"],["zulu","Zulu words"],["collision","Collision"],["muntu","Muntu Wami"],["gospel","Gospel & Flamenco"],["scaffold","Scaffolding"],["synthesis","Synthesis"],["autoencoder","Autoencoder"],["verbatim","Verbatim"],["refs","References"]];
 var menu=document.getElementById("menu");
 function show(id){S.forEach(function(s){document.getElementById(s[0]).classList.toggle("on",s[0]===id)});
 [].forEach.call(menu.children,function(b){b.setAttribute("aria-selected",b.dataset.id===id)});
